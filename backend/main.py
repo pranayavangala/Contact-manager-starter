@@ -8,6 +8,7 @@ def get_contacts():
     json_contacts = [contact.to_json() for contact in contacts]
     return jsonify({"contacts": json_contacts})
 
+#this is to create the contact page
 @app.route("/create_contact", methods=["POST"])
 def create_contact():
     first_name = request.json.get("firstName")
